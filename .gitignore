@@ -1,0 +1,11 @@
+*
+!.gitignore
+!README.md
+!src
+src/*
+!src/*.c
+!src/*.h
+!Makefile
+!*.py
+!*.sh
+!logo.svg
