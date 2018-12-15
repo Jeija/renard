@@ -325,6 +325,9 @@ int main(int argc, char **argv)
 			}
 		}
 	} else if (mode == MODE_DOWNLINK_DECODE) {
+		printf("Sorry, this mode won't work, (de)scrambling algorithm is missing :(\n");
+		exit(1);
+
 		if (!(seqnum_set || dl_use_bruteforce1 || dl_use_bruteforce2) || !(devid_set || dl_use_bruteforce2) || !(key_set || dl_use_bruteforce2) || !dl_frame_set) {
 			printf("Missing argument(s). Please provide sequence number (unless using\n");
 			printf("brute-force mode), device ID, secret key and downlink frame.\n");
@@ -395,6 +398,9 @@ int main(int argc, char **argv)
 			}
 		}
 	} else if (mode == MODE_DOWNLINK_ENCODE) {
+		printf("Sorry, this mode won't work, (de)scrambling algorithm is missing :(\n");
+		exit(1);
+
 		if (!seqnum_set || !devid_set || !key_set || !dl_payload_set) {
 			printf("Missing argument(s). Please provide sequence number,\n");
 			printf("device ID, secret key and downlink payload.\n");
